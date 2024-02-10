@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .blog-content {
+      display: none;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      width: calc(100% - 40px); /* Adjust the width here */
+      margin-left: auto; /* Align to left margin */
+      margin-right: auto; /* Align to right margin */
+      background-image: url('assets/images/collection-3.jpeg'); /* Add the background image */
+      background-size: cover; /* Ensure the image covers the entire div */
+      background-position: center; /* Center the background image */
+      color: #000; /* Set text color to black */
+    }
+
+    .close-btn {
+      cursor: pointer;
+      color: #555;
+      text-decoration: underline;
+    }
+
+    .close-btn:hover {
+      color: #333;
+    }
+  </style>
+</head>
+
+<body>
+  <ul>
+    <!-- Blog button -->
+    <li class="flex-item">
+      <div class="blog-card">
+        <h3 class="h3">
+          <a href="#" class="card-title" onclick="showBlog()">From Our Blog</a>
+        </h3>
+      </div>
+    </li>
+  </ul>
+
+  <!-- Blog content -->
+  <div class="blog-content" id="blogContent">
+    <h2>Chatbots: Revolutionizing E-Commerce Experiences</h2>
+    <p>In the fast-paced world of online shopping, convenience is key. With chatbots stepping into the arena, the e-commerce experience has taken a significant leap forward. Here's a quick dive into how chatbots are making shopping easier and more enjoyable:</p>
+
+    <p>Personalized Assistance: Chatbots analyze your preferences and browsing history to offer tailored product recommendations, ensuring you find exactly what you're looking for without the hassle.</p>
+
+    <p>Instant Support: No more waiting on hold or scouring through FAQs. Chatbots provide instant assistance, answering questions and addressing concerns in real-time, enhancing the shopping experience with prompt and reliable support.</p>
+
+    <p>Seamless Navigation: Navigating through product catalogs is a breeze with chatbots guiding you every step of the way. Whether you're searching for a specific item or exploring new arrivals, chatbots streamline the process, making it easier to find what you need.</p>
+
+    <p>Always Available: With chatbots, help is available 24/7. Whether it's late at night or early in the morning, you can count on chatbots to provide assistance whenever you need it, ensuring a smooth shopping experience anytime, anywhere.</p>
+
+    <p>In essence, chatbots are revolutionizing the e-commerce landscape, providing personalized assistance, instant support, seamless navigation, and simplified checkout processes, ultimately enhancing the overall shopping experience for consumers.</p>
+
+    <p><span class="close-btn" onclick="hideBlog()">Close</span></p>
+  </div>
+
+  <script>
+    // Function to show the blog content
+    function showBlog() {
+      var blogContent = document.getElementById("blogContent");
+      blogContent.style.display = "block";
+    }
+
+    // Function to hide the blog content
+    function hideBlog() {
+      var blogContent = document.getElementById("blogContent");
+      blogContent.style.display = "none";
+    }
+  </script>
+</body>
+
+</html>
